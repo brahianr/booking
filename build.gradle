@@ -1,0 +1,46 @@
+defaultTasks 'clean','test','aggregate'
+
+buildscript {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {
+        classpath("net.serenity-bdd:serenity-gradle-plugin:2.0.80")
+    }
+}
+
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'net.serenity-bdd.aggregator'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    compile 'net.serenity-bdd:serenity-junit:2.0.80'
+    compile 'net.serenity-bdd:serenity-cucumber:1.9.45'
+    compile 'net.serenity-bdd:serenity-core:2.0.80'
+    compile 'net.serenity-bdd:serenity-screenplay:2.0.8'
+    compile 'net.serenity-bdd:serenity-screenplay-webdriver:2.0.8'
+    compile 'com.google.guava:guava:23.0'
+    testCompile 'junit:junit:4.12'
+    testCompile 'org.assertj:assertj-core:3.11.1'
+    testCompile 'org.slf4j:slf4j-simple:1.7.25'
+}
+test.finalizedBy(aggregate)
+
+test {
+    ignoreFailures = true
+}
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+gradle.startParameter.continueOnFailure = true
