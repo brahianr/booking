@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-        features="src/test/resources/features/airport_taxisairport_taxis.feature",
+        features="src/test/resources/features/airport_taxis.feature",
         glue="co.com.devco.certification.booking.stepdefinitions",
         snippets = SnippetType.CAMELCASE
 )

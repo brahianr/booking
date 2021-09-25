@@ -2,7 +2,7 @@ Feature: Airport taxis on Booking
 
   Scenario: Airport taxis one way
     Given that user open Booking home page
-    When he enters the car rental data
+    When he enters the taxi rental data
       | pickUpPlace | destination | pickUpDate          | pickUpTime | passengers |
-      | Cartagena   | Medellin    | 28, Septiembre 2021 | 13         | 3          |
-    Then he should see the available flights
+      | Jardin   | Medellin    | 28, Septiembre 2021 | 13         | 3          |
+    Then he should see the available taxis
