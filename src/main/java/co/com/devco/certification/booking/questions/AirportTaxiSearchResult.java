@@ -11,9 +11,7 @@ public class AirportTaxiSearchResult implements Question<Boolean> {
 
     @Override
     public Boolean answeredBy(Actor actor) {
-        actor.attemptsTo(
-                WaitUntil.the(LBL_TAXI_RESTULT, isVisible()).forNoMoreThan(60).seconds()
-        );
+
         return LBL_TAXI_RESTULT.resolveFor(actor).isVisible();
     }
 

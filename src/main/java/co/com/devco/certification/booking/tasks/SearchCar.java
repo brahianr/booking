@@ -42,12 +42,6 @@ public class SearchCar implements Task {
                 Click.on(CLD_ARRIVAL_DATE_CAR_RENTAL.of(carRentalModel.getReturnMonth(),carRentalModel.getReturnDay())),
                 Click.on(BTN_SEARCH_CAR_RENTAL)
         );
-        System.out.println("11111");
-        System.out.println(CLD_DEPARTURE_DATE_CAR_RENTAL.getCssOrXPathSelector());
-        System.out.println("3333");
-        //System.out.println(CLD_ARRIVAL_DATE_CAR_RENTAL.resolveAllFor(actor).());
-        System.out.println("ff");
-
     }
 
     public static SearchCar forRental(CarRentalModel carRentalModel){

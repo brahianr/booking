@@ -4,18 +4,16 @@ import co.com.devco.certification.booking.interactions.SelectDate;
 import co.com.devco.certification.booking.models.FlightModel;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
-import net.serenitybdd.screenplay.actions.Click;
-import net.serenitybdd.screenplay.actions.Enter;
-import net.serenitybdd.screenplay.actions.JavaScriptClick;
-import net.serenitybdd.screenplay.actions.MoveMouse;
+import net.serenitybdd.screenplay.actions.*;
 import net.serenitybdd.screenplay.questions.JavaScript;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 import org.openqa.selenium.interactions.Actions;
 
+import static co.com.devco.certification.booking.userinterfaces.AirportTaxisPage.LTS_PICKUP_HOUR;
 import static co.com.devco.certification.booking.userinterfaces.FlightsPage.*;
 import static co.com.devco.certification.booking.userinterfaces.HomePage.BTN_FLIGHTS;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
-import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.*;
 
 public class SearchFlight implements Task {
 
@@ -29,22 +27,30 @@ public class SearchFlight implements Task {
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
                 Click.on(BTN_FLIGHTS),
-                WaitUntil.the(BTN_SEARCH_FLIGHT, isVisible()).forNoMoreThan(5).seconds()
+                Click.on(BTN_FLIGHTS),
+                //WaitUntil.the(BTN_CLOSE, isVisible()).forNoMoreThan(5).seconds(),
+                //MoveMouse.to(BTN_SEARCH_FLIGHT),
+                //MoveMouse.to(BTN_CLOSE),
+                //MoveMouse.to(BTN_CLOSE).andThen(Actions::click),
+                //Click.on(BTN_CLOSE),
+                //JavaScriptClick.on(BTN_CLOSE),
+                JavaScriptClick.on(BTN_TRIP),
+                Click.on(LTS_TRIP)
                 //SelectDate.destination()
 
         );
-        try {
+        /*try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
-        }
-        /*actor.attemptsTo(
+        }*/
+        actor.attemptsTo(
                 //Click.on(BTN_ORIGIN),
                 //JavaScriptClick.on(BTN_ORIGIN),
                 MoveMouse.to(BTN_ORIGIN).andThen(Actions::clickAndHold).andThen(Actions::doubleClick),
                 Enter.theValue(flightModel.getOrigin()).into(LBL_ORIGIN),
                 Click.on(LTS_ORIGIN)
-        );*/
+        );
         actor.attemptsTo(
                 //Click.on(BTN_DESTINATION),
                 //JavaScriptClick.on(BTN_DESTINATION),

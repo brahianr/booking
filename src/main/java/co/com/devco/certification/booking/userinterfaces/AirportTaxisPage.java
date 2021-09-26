@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 
 public class AirportTaxisPage {
 
+    public static final Target RDB_ROUND_TRIP= Target.the("").located(By.xpath("//label[@class='rw-radio rw-return-radio__affirmative']"));
     public static final Target TXT_PICKUP_PLACE= Target.the("").located(By.id("pickupLocation"));
     public static final Target LBL_PICKUP_PLACE= Target.the("").located(By.xpath("//ul[@id='pickupLocation-items']/child::li[2]"));
     public static final Target TXT_DROPOFF_PLACE= Target.the("").located(By.id("dropoffLocation"));

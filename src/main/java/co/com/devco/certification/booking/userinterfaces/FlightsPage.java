@@ -5,6 +5,9 @@ import org.openqa.selenium.By;
 
 public class FlightsPage {
 
+    public static final Target BTN_CLOSE =Target.the("").located(By.xpath("//section[@class='form-section ']"));
+    public static final Target BTN_TRIP =Target.the("").located(By.xpath("//div[contains(@aria-activedescendant,'switch-option-1')]//div"));
+    public static final Target LTS_TRIP =Target.the("").located(By.xpath("//li[contains(.,'Solo ida')]"));
     public static final Target BTN_ORIGIN =Target.the("").located(By.xpath("//div[contains(@id,'origin-airport-display-inner')]"));
     public static final Target LBL_ORIGIN =Target.the("").located(By.xpath("//input[contains(@id,'origin-airport')]"));
     public static final Target LTS_ORIGIN =Target.the("").located(By.xpath("//input[contains(@id,'origin-airport')]//following::ul//following::ul"));

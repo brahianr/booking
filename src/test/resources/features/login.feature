@@ -10,3 +10,11 @@ Feature: Login
       | testr3@test.com | Testpass123 |
     Then he should be logged in
 
+    @manual-result:failed
+    Scenario: Login Falied
+      Given that user open Booking home page
+      When he submit username and password
+        | email           | password    |
+        | testr3@test.com | Testpass |
+      Then he should see the wrong email or pass message
+
