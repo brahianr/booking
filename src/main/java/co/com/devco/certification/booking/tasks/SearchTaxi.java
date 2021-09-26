@@ -32,7 +32,7 @@ public class SearchTaxi implements Task {
                 WaitUntil.the(LBL_DROPOFF_PLACE, isVisible()).forNoMoreThan(5).seconds(),
                 Click.on(LBL_DROPOFF_PLACE),
                 Click.on(DP_CALENDAR_AIRPORT_TAXI),
-                Click.on(DP_PICKUP_DATE),
+                Click.on(DP_PICKUP_DATE.of(airportTaxisModel.getPickUpDate())),
                 Click.on(BTN_PICKUP_TIME),
                 SelectFromOptions.byVisibleText(airportTaxisModel.getPickUpTime()).from(LTS_PICKUP_HOUR),
                 Click.on(BTN_PICKUP_HOUR),

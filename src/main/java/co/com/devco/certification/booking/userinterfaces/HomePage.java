@@ -13,5 +13,7 @@ public class HomePage extends PageObject {
     public static final Target LBL_WELCOME_MESSAGE=Target.the("").located(By.id("//h2[@id='genius-onboarding-title']"));
     public static final Target BTN_NOTIFICATIONS=Target.the("").located(By.xpath("//button[@data-text='Ver tus notificaciones']"));
     public static final Target BTN_FLIGHTS=Target.the("").located(By.xpath("//a[@data-decider-header='flights']"));
+    public static final Target BTN_CAR_RENTAL=Target.the("").located(By.xpath("//a[@data-decider-header='bookinggo']"));
     public static final Target BTN_AIRPORT_TAXI=Target.the("").located(By.xpath("//a[@data-decider-header='rideways']"));
+    public static final Target BTN_TOURIST_ATTRACTION=Target.the("").located(By.xpath("//a[@data-decider-header='attractions']"));
 }

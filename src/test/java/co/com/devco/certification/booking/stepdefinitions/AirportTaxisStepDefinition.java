@@ -1,12 +1,14 @@
 package co.com.devco.certification.booking.stepdefinitions;
 
 import co.com.devco.certification.booking.models.AirportTaxisModel;
+import co.com.devco.certification.booking.questions.AirportTaxiSearchResult;
 import co.com.devco.certification.booking.tasks.SearchTaxi;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 import java.util.List;
 
+import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
 public class AirportTaxisStepDefinition {
@@ -19,5 +21,6 @@ public class AirportTaxisStepDefinition {
 
     @Then("^he should see the available taxis$")
     public void heShouldSeeTheAvailableTaxis() {
+        theActorInTheSpotlight().should(seeThat(AirportTaxiSearchResult.showAvailableOnes()));
     }
 }

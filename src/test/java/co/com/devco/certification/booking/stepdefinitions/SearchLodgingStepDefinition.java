@@ -1,6 +1,7 @@
 package co.com.devco.certification.booking.stepdefinitions;
 
 import co.com.devco.certification.booking.models.HotelReservationModel;
+import co.com.devco.certification.booking.questions.LodgingSearchResult;
 import co.com.devco.certification.booking.tasks.SearchLodging;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
@@ -11,10 +12,11 @@ import net.serenitybdd.screenplay.actors.OnlineCast;
 
 import java.util.List;
 
+import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
-public class HotelReservationStepDefinition {
+public class SearchLodgingStepDefinition {
 
     @Before
     public void setUp(){
@@ -30,8 +32,9 @@ public class HotelReservationStepDefinition {
         theActorInTheSpotlight().attemptsTo(SearchLodging.onPage(data.get(0)));
     }
 
-    @Then("^he should see the confirmed reservation message$")
-    public void heShouldSeeTheConfirmedReservationMessage() {
+    @Then("^he should see the available lodging on (.*)$")
+    public void heShouldSeeTheAvailableLodgingOn(String destination) {
+        theActorInTheSpotlight().should(seeThat(LodgingSearchResult.onDestination(destination)));
     }
 
 
