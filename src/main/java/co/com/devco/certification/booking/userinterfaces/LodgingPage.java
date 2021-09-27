@@ -12,7 +12,7 @@ public class LodgingPage {
     public static final Target DP_CHECK_OUT = Target.the("").locatedBy("//td[@data-date='{0}']");
     public static final Target LBL_GUESTS = Target.the("").located(By.id("xp__guests__toggle"));
     public static final Target BTN_SEARCH = Target.the("").located(By.xpath("//button[@data-sb-id='main']"));
-    public static final Target IMG_FIRST_RESULT = Target.the("").located(By.xpath("//div[@data-et-click='customGoal:NAREFBINEIfBccOHT:2']/div"));
+    //public static final Target IMG_FIRST_RESULT = Target.the("").located(By.xpath("//div[@data-et-click='customGoal:NAREFBINEIfBccOHT:2']/div"));
     public static final Target BTN_RESERVE_NOW = Target.the("").located(By.id("hp_book_now_button"));
     public static final Target BTN_RESERVE_WITH_DISCOUNT = Target.the("").located(By.id("b_tt_holder_1"));
     public static final Target LTS_CHECK_IN = Target.the("").located(By.id("checkin_eta_hour"));

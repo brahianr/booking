@@ -1,4 +1,4 @@
-Feature: Add favorites lodging
+Feature: Reserve lodging
 
   Background:
     Given that user open Booking home page
@@ -6,9 +6,9 @@ Feature: Add favorites lodging
       | email           | password    |
       | testr3@test.com | Testpass123 |
 
-  Scenario: Add Hotel to favorites
+  Scenario: Reserve lower price lodging
     Given he enters the reservation data
       | destination | check in   | check out  |
-      | Cartagena    | 2021-09-29 | 2021-10-10 |
-    When he add hotel to favorites
-    Then he should see the hotel in favorites
+      | Medellin    | 2021-09-29 | 2021-10-10 |
+    When he choose the lowest priced hotel
+    Then he should see the message reservation confirmed

@@ -8,7 +8,6 @@ import net.serenitybdd.screenplay.actions.Click;
 import static co.com.devco.certification.booking.userinterfaces.HomePage.BTN_FAVOTIRES;
 import static co.com.devco.certification.booking.userinterfaces.HomePage.BTN_PROFILE_MENU;
 import static co.com.devco.certification.booking.userinterfaces.LodgingSearchResultPage.BTN_FAVORITE_FIRST_RESULT;
-import static co.com.devco.certification.booking.userinterfaces.LodgingSearchResultPage.LBL_FIRST_RESULT;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class AddLodging implements Task {
