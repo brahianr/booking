@@ -1,5 +1,6 @@
 package co.com.devco.certification.booking.stepdefinitions;
 
+import co.com.devco.certification.booking.exceptions.AddFavoriteLodgingNotCompletedException;
 import co.com.devco.certification.booking.models.HotelReservationModel;
 import co.com.devco.certification.booking.questions.ViewTheItem;
 import co.com.devco.certification.booking.tasks.AddLodging;
@@ -9,6 +10,8 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import java.util.List;
+
+import static co.com.devco.certification.booking.exceptions.AddFavoriteLodgingNotCompletedException.ADD_FAVORITE_FAILED;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
@@ -28,7 +31,7 @@ public class AddFavoriteLodgingStepDefinition {
 
     @Then("^he should see the hotel in favorites$")
     public void heShouldSeeTheHotelInFavorites() {
-        theActorInTheSpotlight().should(seeThat(ViewTheItem.inFavorites()));
+        theActorInTheSpotlight().should(seeThat(ViewTheItem.inFavorites()).orComplainWith(AddFavoriteLodgingNotCompletedException.class,ADD_FAVORITE_FAILED));
     }
 
 }

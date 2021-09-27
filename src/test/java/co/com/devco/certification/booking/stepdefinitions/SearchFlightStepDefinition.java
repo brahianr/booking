@@ -13,7 +13,7 @@ public class SearchFlightStepDefinition {
 
     @When("^he enters the flight data$")
     public void heEntersTheFlightData(List<FlightModel> data) {
-        theActorInTheSpotlight().attemptsTo(SearchFlight.onPage(data.get(0)));
+        //theActorInTheSpotlight().attemptsTo(SearchFlight.onPage(data.get(0)));
     }
 
     @Then("^he should see the available flights$")

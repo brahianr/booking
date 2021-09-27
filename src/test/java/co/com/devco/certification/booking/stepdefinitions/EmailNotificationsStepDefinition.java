@@ -1,5 +1,6 @@
 package co.com.devco.certification.booking.stepdefinitions;
 
+import co.com.devco.certification.booking.exceptions.EmailNotUnsubscribedException;
 import co.com.devco.certification.booking.questions.Email;
 import co.com.devco.certification.booking.tasks.EnterTheNotification;
 import co.com.devco.certification.booking.tasks.UnsubscribeEmail;
@@ -7,6 +8,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
+import static co.com.devco.certification.booking.exceptions.EmailNotUnsubscribedException.UNSUBSCRIBE_FAILED_MESSAGE;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
@@ -28,6 +30,6 @@ public class EmailNotificationsStepDefinition {
 
     @Then("^he should see the message you have unsubscribed$")
     public void heShouldSeeTheMessageYouHaveUnsubscribed() {
-        theActorInTheSpotlight().should(seeThat(Email.wasUnsubscribed()));
+        theActorInTheSpotlight().should(seeThat(Email.wasUnsubscribed()).orComplainWith(EmailNotUnsubscribedException.class,UNSUBSCRIBE_FAILED_MESSAGE));
     }
 }

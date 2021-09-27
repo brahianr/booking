@@ -22,7 +22,6 @@ public class ChooseThe implements Task {
                 WaitUntil.the(IMG_LOADING_RESULT, isNotCurrentlyVisible()).forNoMoreThan(5).seconds(),
                 Click.on(IMG_FIRST_RESULT),
                 SwitchToNew.newTab(),
-                //Scroll.to(BTN_RESERVE),
                 Click.on(BTN_RESERVE_NOW),
                 SelectFromOptions.byValue("1").from(LTS_BED_NUMBER),
                 WaitUntil.the(BTN_RESERVE, isClickable()).forNoMoreThan(3).seconds(),

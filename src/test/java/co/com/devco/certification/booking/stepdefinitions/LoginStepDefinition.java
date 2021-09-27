@@ -1,7 +1,9 @@
 package co.com.devco.certification.booking.stepdefinitions;
 
+import co.com.devco.certification.booking.exceptions.LogInNotCompletedException;
 import co.com.devco.certification.booking.interactions.OpenBrowser;
 import co.com.devco.certification.booking.models.UserModel;
+import co.com.devco.certification.booking.questions.LogInResult;
 import co.com.devco.certification.booking.tasks.LogIn;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
@@ -12,6 +14,7 @@ import net.serenitybdd.screenplay.actors.OnlineCast;
 
 import java.util.List;
 
+import static co.com.devco.certification.booking.exceptions.LogInNotCompletedException.LOGIN_FAILED_MESSAGE;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
@@ -35,6 +38,6 @@ public class LoginStepDefinition {
 
     @Then("^he should be logged in$")
     public void heShouldBeLoggedIn() {
-        theActorInTheSpotlight().should(seeThat(co.com.devco.certification.booking.questions.LogIn.successful()));
+        theActorInTheSpotlight().should(seeThat(LogInResult.successful()).orComplainWith(LogInNotCompletedException.class, LOGIN_FAILED_MESSAGE));
     }
 }
