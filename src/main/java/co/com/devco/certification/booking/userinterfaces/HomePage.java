@@ -16,4 +16,6 @@ public class HomePage extends PageObject {
     public static final Target BTN_CAR_RENTAL=Target.the("").located(By.xpath("//a[@data-decider-header='bookinggo']"));
     public static final Target BTN_AIRPORT_TAXI=Target.the("").located(By.xpath("//a[@data-decider-header='rideways']"));
     public static final Target BTN_TOURIST_ATTRACTION=Target.the("").located(By.xpath("//a[@data-decider-header='attractions']"));
+    public static final Target BTN_PROFILE_MENU=Target.the("").located(By.id("profile-menu-trigger--content"));
+    public static final Target BTN_MANAGE_ACCOUNT=Target.the("").located(By.xpath("//span[@id='profile-menu-trigger--content']//following::ul//li"));
 }
