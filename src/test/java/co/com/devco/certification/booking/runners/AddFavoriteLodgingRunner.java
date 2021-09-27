@@ -7,9 +7,9 @@ import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-        features="src/test/resources/features/search_lodging.feature",
+        features="src/test/resources/features/add_favorite_lodging.feature",
         glue="co.com.devco.certification.booking.stepdefinitions",
         snippets = SnippetType.CAMELCASE
 )
-public class SearchLodgingRunner {
+public class AddFavoriteLodgingRunner {
 }

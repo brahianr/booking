@@ -18,4 +18,5 @@ public class HomePage extends PageObject {
     public static final Target BTN_TOURIST_ATTRACTION=Target.the("").located(By.xpath("//a[@data-decider-header='attractions']"));
     public static final Target BTN_PROFILE_MENU=Target.the("").located(By.id("profile-menu-trigger--content"));
     public static final Target BTN_MANAGE_ACCOUNT=Target.the("").located(By.xpath("//span[@id='profile-menu-trigger--content']//following::ul//li"));
+    public static final Target BTN_FAVOTIRES=Target.the("").located(By.xpath("//span[contains(.,'Favori')]"));
 }
