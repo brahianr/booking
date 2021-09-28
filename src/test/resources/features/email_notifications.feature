@@ -9,7 +9,7 @@ Feature: Email notifications
       | email           | password    |
       | testnotify@test.com | Testpass123 |
     Then he should be logged in
-
+  @automatic
   Scenario: Unsubscribe from email notifications for reservations
     Given that user is in email notifications for reservation option
     When unsubscribe from email notifications for reservations

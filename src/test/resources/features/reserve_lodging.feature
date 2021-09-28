@@ -10,6 +10,7 @@ Feature: Reserve lodging
       | reservetest@test.com | Testpass123 |
     Then he should be logged in
 
+  @automatic
   Scenario: Reserve lower price lodging
     Given he enters the reservation data
       | destination | check in   | check out  |

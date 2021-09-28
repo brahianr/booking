@@ -9,7 +9,7 @@ Feature: Add travel companion
       | email           | password    |
       | testcompanion@test.com | Testpass123 |
     Then he should be logged in
-
+  @automatic
   Scenario: Add travel companion successful
     Given that user is in travel companion option
     When he enters the data of his companion

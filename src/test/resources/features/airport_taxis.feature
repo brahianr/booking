@@ -2,7 +2,7 @@ Feature: Airport taxis on Booking
   As a Booking user
   I want to order a car at the airport
   To transport me to the airport
-
+  @automatic
   Scenario: Airport taxis one way
     Given that user open Booking home page
     When he enters the taxi rental data

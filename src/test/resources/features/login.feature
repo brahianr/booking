@@ -3,6 +3,7 @@ Feature: Login
   I want to Login
   To interact with the page
 
+  @automatic
   Scenario: Login successful
     Given that user open Booking home page
     When he submit username and password

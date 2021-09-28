@@ -10,6 +10,7 @@ Feature: Add favorites lodging
       | testr3@test.com | Testpass123 |
     Then he should be logged in
 
+    @automatic
   Scenario: Add Hotel to favorites
     Given he enters the reservation data
       | destination | check in   | check out  |
