@@ -17,7 +17,7 @@ Clonar el proyecto en la maquina local en la ubicacion deseada con el siguiente 
 `git clone https://github.com/brahianr/booking.git`
 
 ### Abrir el proyecyo en Intellij
-- Se recomeinda abir el proyecto desde el archivo build.gradle en IntelliJ.
+- Se recomeinda abrir el proyecto desde el archivo build.gradle en IntelliJ.
 
 ## Ejecucion de casos de prueba
 Para la ejecucion de los escenarios de prueba se puede usar el siguiente comando desde la consola de intelliJ:  
