@@ -9,7 +9,7 @@ Para la clonacion y ejecucion del proyecto es necesario contar con los siguiente
 - IntelliJ IDEA Community Edition version 2020.1.1 o mas reciente.
 - Plugin "Cucumber for Java" instalado en intelliJ.
 - Plugin "Gherkin" instalado en intelliJ.
-- Navegdor Google Chrome Versión 93.0.4577.63.
+- Navegdor Google Chrome Versión 93.0.4577.63 (en caso de contar con una version de Google Chrome superior descargar el driver de esta misma y pegarlo en la raiz del proyecto).
 - Git
 
 ## Clonacion del proyecto
