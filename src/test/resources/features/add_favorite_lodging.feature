@@ -11,7 +11,7 @@ Feature: Add favorites lodging
     Then he should be logged in
 
     @automatic
-  Scenario: Add Hotel to favorites
+  Scenario: Add first hotel to favorites
     Given he enters the reservation data
       | destination | check in   | check out  |
       | Cartagena    | 2021-10-05 | 2021-10-10 |
