@@ -1,8 +1,7 @@
 Feature: Airport taxis on Booking
-  As a "Booking" user
+  As a Booking user
   I want to order a car at the airport
   To transport me to the airport
-
 
   Scenario: Airport taxis one way
     Given that user open Booking home page

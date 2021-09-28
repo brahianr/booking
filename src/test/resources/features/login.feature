@@ -7,7 +7,7 @@ Feature: Login
     Given that user open Booking home page
     When he submit username and password
       | email           | password    |
-      | testr3@test.com | Testpass123 |
+      | userLogin@test.com| Testpass123 |
     Then he should be logged in
 
   @manual

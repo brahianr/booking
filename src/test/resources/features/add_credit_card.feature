@@ -9,7 +9,7 @@ Feature: add data for payments
   Scenario: Add valid credit card
     Given the user is in the payment details option of his profile
     When he enter your credit card details
-    Then he should see the credit card added
+    Then he should see the message added credit card
 
   @manual
   @manual-result:failed

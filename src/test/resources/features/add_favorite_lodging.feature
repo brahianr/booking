@@ -13,6 +13,6 @@ Feature: Add favorites lodging
   Scenario: Add Hotel to favorites
     Given he enters the reservation data
       | destination | check in   | check out  |
-      | Cartagena    | 2021-09-29 | 2021-10-10 |
+      | Cartagena    | 2021-10-05 | 2021-10-10 |
     When he add hotel to favorites
     Then he should see the hotel in favorites
