@@ -9,7 +9,7 @@ Para la clonacion y ejecucion del proyecto es necesario contar con los siguiente
 - IntelliJ IDEA Community Edition version 2020.1.1 o mas reciente.
 - Plugin "Cucumber for Java" instalado en intelliJ.
 - Plugin "Gherkin" instalado en intelliJ.
-- Navegdor Google Chrome Versión 93.0.4577.63 (en caso de contar con una version de Google Chrome superior descargar el driver de esta misma y pegarlo en la raiz del proyecto).
+- Navegador Google Chrome Versión 93.0.4577.63 (en caso de contar con una version de Google Chrome superior descargar el driver de esta misma y pegarlo en la raiz del proyecto).
 - Git
 
 ## Clonacion del proyecto
@@ -32,10 +32,10 @@ booking\src\test\java\co\com\devco\certification\booking\runners
 ### Casos de prueba automatizados
 Los casos de prueba automatizados se encuentran tageados dentro de los archivos feature con el tag:  
 `@automatic`  
-Esto se hace con el fin de diferenciarlos de los ccasos de prueba manuales.
+Esto se hace con el fin de diferenciarlos de los casos de prueba manuales.
 
 ### Casos de prueba manuales
-Los casos de prueba manuales se crearon dentro de los difeentes archivos .features identificados con los tags:  
+Los casos de prueba manuales se crearon dentro de los diferentes archivos .features identificados con los tags:  
 ```
 @manual  
 @manual-result:passed  
