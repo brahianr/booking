@@ -26,12 +26,7 @@ public class LogIn implements Task {
                 Enter.theValue(userModel.getEmail()).into(TXT_USERNAME),
                 Click.on(BTN_CONTINUEWITHEMAIL),
                 Enter.theValue(userModel.getPassword()).into(TXT_PASSWORD),
-                Click.on(BTN_SIGNIN),
-                Switch.toWindow("")
-
-
-
-
+                Click.on(BTN_SIGNIN)
         );
 
     }

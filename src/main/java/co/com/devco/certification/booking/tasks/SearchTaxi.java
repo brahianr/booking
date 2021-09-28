@@ -33,13 +33,12 @@ public class SearchTaxi implements Task {
                 Enter.theValue(airportTaxisModel.getDestination()).into(TXT_DROPOFF_PLACE),
                 WaitUntil.the(LBL_DROPOFF_PLACE, isVisible()).forNoMoreThan(5).seconds(),
                 Click.on(LBL_DROPOFF_PLACE),
-                Click.on(DP_CALENDAR_AIRPORT_TAXI),
-                Click.on(DP_PICKUP_DATE.of(airportTaxisModel.getPickUpDate())),
+                Click.on(CLD_CALENDAR_AIRPORT_TAXI),
+                Click.on(CLD_PICKUP_DATE.of(airportTaxisModel.getPickUpDate())),
                 Click.on(BTN_PICKUP_TIME),
                 SelectFromOptions.byVisibleText(airportTaxisModel.getPickUpTime()).from(LTS_PICKUP_HOUR)
 
         );
-
         actor.attemptsTo(
                 Click.on(BTN_PICKUP_HOUR),
                 SelectFromOptions.byVisibleText(airportTaxisModel.getPassengers()).from(LTS_PASSENGERS),

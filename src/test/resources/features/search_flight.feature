@@ -1,11 +1,10 @@
 Feature: Search Flight on Booking
+  As a Booking user
+  I want to look for a flight
+  To go around
 
-#  Background:
-#    Given that user open Booking home page
-#    When he submit username and password
-#      | email           | password    |
-#      | testr3@test.com | Testpass123 |
-
+  @manual
+  @manual-result:passed
   Scenario: Search flight round trip
     Given that user open Booking home page
     When he enters the flight data

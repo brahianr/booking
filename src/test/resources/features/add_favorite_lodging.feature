@@ -1,10 +1,14 @@
 Feature: Add favorites lodging
+  As a Booking user
+  I want to add lodging to favorites
+  to be able to consult them
 
   Background:
     Given that user open Booking home page
     When he submit username and password
       | email           | password    |
       | testr3@test.com | Testpass123 |
+    Then he should be logged in
 
   Scenario: Add Hotel to favorites
     Given he enters the reservation data

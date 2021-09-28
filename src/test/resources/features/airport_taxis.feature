@@ -1,10 +1,8 @@
 Feature: Airport taxis on Booking
+  As a "Booking" user
+  I want to order a car at the airport
+  To transport me to the airport
 
-  #  Background:
-#    Given that user open Booking home page
-#    When he submit username and password
-#      | email           | password    |
-#      | testr3@test.com | Testpass123 |
 
   Scenario: Airport taxis one way
     Given that user open Booking home page

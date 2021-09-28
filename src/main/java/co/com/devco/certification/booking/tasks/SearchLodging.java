@@ -6,13 +6,7 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.waits.WaitUntil;
-
-import java.util.List;
-
-import static co.com.devco.certification.booking.userinterfaces.HomePage.BTN_FAVOTIRES;
-import static co.com.devco.certification.booking.userinterfaces.HomePage.BTN_PROFILE_MENU;
 import static co.com.devco.certification.booking.userinterfaces.LodgingPage.*;
-import static co.com.devco.certification.booking.userinterfaces.LodgingSearchResultPage.BTN_FAVORITE_FIRST_RESULT;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
@@ -29,9 +23,9 @@ public class SearchLodging implements Task {
         actor.attemptsTo(
                 WaitUntil.the(TXT_SEARCH, isVisible()).forNoMoreThan(10).seconds(),
                 Enter.theValue(hotelReservationModel.getDestination()).into(TXT_SEARCH),
-                Click.on(DP_CALENDAR),
-                Click.on(DP_CHECK_IN.of(hotelReservationModel.getCheckIn())),
-                Click.on(DP_CHECK_OUT.of(hotelReservationModel.getCheckOut())),
+                Click.on(CLD_CALENDAR),
+                Click.on(CLD_CHECK_IN.of(hotelReservationModel.getCheckIn())),
+                Click.on(CLD_CHECK_OUT.of(hotelReservationModel.getCheckOut())),
                 Click.on(BTN_SEARCH)
         );
 

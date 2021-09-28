@@ -3,6 +3,7 @@ Feature: Create account
   I want to register
   To interact with the page
 
+  @manual
   @manual-result:passed
   Scenario: Create successful account
     Given that a web user wants to register on booking
@@ -11,6 +12,7 @@ Feature: Create account
       | testr5@test.com | Testpass123 |
     Then he should see the welcome message
 
+  @manual
   @@manual-result:failed
   Scenario: Failed account creation by password does not meet the requirements
     Given that a web user wants to register on booking
@@ -19,6 +21,7 @@ Feature: Create account
       | testr5@test.com | Testpass |
     Then He should see the message the password does not meet the requirements
 
+  @manual
   @@manual-result:failed
   Scenario: Account creation failed due to passwords mismatch
     Given that a web user wants to register on booking

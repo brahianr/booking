@@ -5,5 +5,5 @@ import org.openqa.selenium.By;
 
 public class AirtportTaxisResultPage {
 
-    public static final Target LBL_TAXI_RESTULT = Target.the("").located(By.xpath("//h2[contains(.,'Elige un taxi')]"));
+    public static final Target LBL_TAXI_RESTULT = Target.the("Taxi result label").located(By.xpath("//h2[contains(.,'Elige un taxi')]"));
 }

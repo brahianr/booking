@@ -1,10 +1,14 @@
 Feature: Reserve lodging
+  As a Booking user
+  I want to book an accommodation
+  To my stay
 
   Background:
     Given that user open Booking home page
     When he submit username and password
       | email           | password    |
-      | testr3@test.com | Testpass123 |
+      | reservetest@test.com | Testpass123 |
+    Then he should be logged in
 
   Scenario: Reserve lower price lodging
     Given he enters the reservation data

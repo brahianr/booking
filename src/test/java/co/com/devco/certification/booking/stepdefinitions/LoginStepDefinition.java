@@ -26,9 +26,9 @@ public class LoginStepDefinition {
         OnStage.setTheStage(new OnlineCast());
     }
 
-    @Given("^that user open Booking home page$")
-    public void thatUserOpenBookingHomePage() {
-        theActorCalled("Brahian").wasAbleTo(OpenBrowser.onUrl());
+    @Given("^that (.*) open Booking home page$")
+    public void thatUserOpenBookingHomePage(String user) {
+        theActorCalled(user).wasAbleTo(OpenBrowser.onUrl());
     }
 
     @When("^he submit username and password$")

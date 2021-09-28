@@ -29,12 +29,6 @@ public class EnterHis implements Task {
                 Click.on(BTN_SAVE)
         );
 
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
     }
 
     public static EnterHis companionData(TravelCompanionModel travelCompanionModel){
